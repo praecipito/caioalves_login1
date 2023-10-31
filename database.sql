@@ -4,9 +4,9 @@ DROP TABLE IF EXISTS `students`;
 CREATE TABLE `students` (
 	`id` int(11) NOT NULL AUTO_INCREMENT,
     `name` varchar(100) NOT NULL,
-    `username` varchar (30) NOT NULL,
+    `username` varchar (30) NOT NULL UNIQUE,
     `email` varchar (100) NOT NULL UNIQUE,
-    `password` varchar (30) NOT NULL,
-    `role` varchar (10) NOT NULL,
+    `password` varchar (1000) NOT NULL,
+    `isStudent` tinyint NOT NULL,
     PRIMARY KEY (`id`)
 );
