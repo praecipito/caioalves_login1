@@ -6,7 +6,7 @@ exports.register = (req, res, next) => {
     username: req.body.username,
     email: req.body.email,
     password: req.body.password,
-    category: req.body.role
+    role: req.body.role
   }
   studentsService.register(data, (err, results) => {
     if (err) {
